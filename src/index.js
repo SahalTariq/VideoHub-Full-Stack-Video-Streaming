@@ -5,6 +5,14 @@ import mongoose from 'mongoose';
 import connectDB from './db/dbConnect.js';
 import app from './app.js';
 
+import fs from 'fs';
+import path from 'path';
+
+const tempDir = path.join(process.cwd(), 'public', 'temp');
+if (!fs.existsSync(tempDir)) {
+  fs.mkdirSync(tempDir, { recursive: true });
+  console.log('Created temp directory:', tempDir);
+}
 
 
 dotenv.config({
