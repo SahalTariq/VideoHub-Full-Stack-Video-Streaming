@@ -27,9 +27,9 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
-app.get('/', (req, res) => {
-  res.send('VideoHub API is running 🚀');
-});
+// app.get('/', (req, res) => {
+//   res.send('VideoHub API is running 🚀');
+// });
 
 app.use(express.json({limit:'16kb'}))
 app.use(express.urlencoded({extended:true, limit:'16kb'}))
