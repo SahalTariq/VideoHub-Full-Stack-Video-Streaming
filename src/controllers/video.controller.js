@@ -61,7 +61,7 @@ const publishVideo = asyncHandler(async(req,res) => {
 
 
 const getMyVideos = asyncHandler(async (req, res) => {
-    console.log("User Controller",req.user)
+    // console.log("User Controller",req.user)
   const videos = await Video.find({ owner: req.user?._id })
     .populate("owner", "username avatar")
     .sort({ createdAt: -1 });
@@ -193,7 +193,7 @@ const getMyVideos = asyncHandler(async (req, res) => {
 
 const getVideoById = asyncHandler(async (req, res) => {
   try {
-   console.log("Fetching video ID:", req.params.id);
+  //  console.log("Fetching video ID:", req.params.id);
    
     const video = await Video.findById(req.params.id)
       .populate("owner", "username avatar");
@@ -267,7 +267,7 @@ const updateVideo = asyncHandler(async (req, res) => {
         { new: true }
     );
 
-    console.log("UPDATED VIDEO:", updatedVideo);
+    // console.log("UPDATED VIDEO:", updatedVideo);
 
     return res.status(200).json(
         new ApiResponse(200, updatedVideo, "Video updated successfully")
