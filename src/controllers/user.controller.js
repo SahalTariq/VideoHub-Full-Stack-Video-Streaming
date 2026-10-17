@@ -33,7 +33,7 @@ const generateAccessAndRefreshTokens = async(userId) => {
     }
 
     } catch (error) {
-        console.log(error)
+        // console.log(error)
         throw new ApiError(500,'someThing went wrong while generating Access and Refresh Token')
         // console.log("Error :" , error)
     }
@@ -509,7 +509,7 @@ const getUserChannelProfile =asyncHandler(async(req,res)=>{
    if(!username?.trim()){
     throw new ApiError(400,'username is missing')
    }
-   console.log("username",username)
+//    console.log("username",username)
 
    const channel = User.aggregate([
     {
@@ -568,11 +568,11 @@ const getUserChannelProfile =asyncHandler(async(req,res)=>{
     
    ])
 
-   console.log("channel",channel)
+//    console.log("channel",channel)
    if(!channel?.length){
     throw new ApiError(404,"Channel doesn't exists")
    }
-   console.log("channel",channel.length)
+//    console.log("channel",channel.length)
 
    return res
    .status(200)
