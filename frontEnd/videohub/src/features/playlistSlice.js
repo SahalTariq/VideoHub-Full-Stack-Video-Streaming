@@ -24,8 +24,8 @@ export const fetchUserPlaylists = createAsyncThunk(
 
       if (!res.ok) throw new Error(data.message);
 
-      console.log("User Id in fetchUserPlaylist slice", userId);
-      console.log("Fetched Playlists:", data.data);
+      // console.log("User Id in fetchUserPlaylist slice", userId);
+      // console.log("Fetched Playlists:", data.data);
 
       return data.data;
     } catch (err) {
@@ -51,7 +51,7 @@ export const createPlaylist = createAsyncThunk(
       });
 
       const data = await res.json();
-      console.log("Created Playlist:", data.data._id);
+      // console.log("Created Playlist:", data.data._id);
       if (!res.ok) throw new Error(data.message);
 
       return data.data;
@@ -140,7 +140,7 @@ export const fetchPlaylistById = createAsyncThunk(
       const data = await res.json();
       if (!res.ok) throw new Error(data.message);
 
-      console.log("PLAYLIST API RESPONSE:", data);
+      // console.log("PLAYLIST API RESPONSE:", data);
 
       return data.data;
     } catch (err) {
