@@ -9,7 +9,7 @@ export default function ProfilePage() {
   const dispatch = useDispatch();
   const { videos, loading } = useSelector((state) => state.video);
   const { user } = useSelector((state) => state.auth); // assuming auth slice
-  console.log("User",user)
+  // console.log("User",user)
 
   const [activeTab, setActiveTab] = useState("videos");
 
