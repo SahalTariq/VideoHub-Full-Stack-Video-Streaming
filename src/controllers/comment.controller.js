@@ -107,7 +107,7 @@ const deleteComment = asyncHandler(async (req, res) => {
 });
 
 const getVideoComments = asyncHandler(async (req, res) => {
-  console.log("✅ GET VIDEO COMMENTS HIT");
+  // console.log("✅ GET VIDEO COMMENTS HIT");
   
   const { Id } = req.params;
 
@@ -142,7 +142,7 @@ const getVideoComments = asyncHandler(async (req, res) => {
 // controllers/comment.controller.js
 
 const getComments = asyncHandler(async (req, res) => {
-  console.log("Controller Hits");
+  // console.log("Controller Hits");
 
   const comments = await Comment.aggregate([
     {

@@ -11,7 +11,7 @@ import { verifyJWT } from "../middlewares/auth.middlewear.js"
 
 const router = Router();
 
-console.log("verifyJWT:", verifyJWT);
+// console.log("verifyJWT:", verifyJWT);
 
 // Apply verifyJWT middleware to all routes in this file
 // router.use(verifyJWT);
@@ -40,11 +40,11 @@ router
   .delete(verifyJWT, deleteComment);
 
 // Debug logging
-console.log("✅ Comment routes registered:");
-console.log("  - GET    /api/v1/comments");
-console.log("  - GET    /api/v1/comments/:videoId");
-console.log("  - POST   /api/v1/comments/:videoId");
-console.log("  - DELETE /api/v1/comments/c/:commentId");
-console.log("  - PATCH  /api/v1/comments/c/:commentId");
+// console.log("✅ Comment routes registered:");
+// console.log("  - GET    /api/v1/comments");
+// console.log("  - GET    /api/v1/comments/:videoId");
+// console.log("  - POST   /api/v1/comments/:videoId");
+// console.log("  - DELETE /api/v1/comments/c/:commentId");
+// console.log("  - PATCH  /api/v1/comments/c/:commentId");
 
 export default router;

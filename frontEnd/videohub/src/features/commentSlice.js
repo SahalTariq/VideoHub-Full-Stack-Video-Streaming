@@ -14,7 +14,7 @@ const backendUrl = import.meta.env.VITE_API_URL;
 export const getComments = createAsyncThunk(
   "comments/getComments",
   async (Id, { rejectWithValue }) => {
-    console.log("getComments Thunk Hit with Id:", Id);
+    // console.log("getComments Thunk Hit with Id:", Id);
     try {
       const res = await fetch(`${API}/${Id}`);
 
@@ -40,7 +40,7 @@ export const addComment = createAsyncThunk(
   async ({ videoId, content }, { rejectWithValue }) => {
     try {
     
-      console.log("VideoId in addComment:", videoId);
+      // console.log("VideoId in addComment:", videoId);
       const res = await fetchWithAuth(`${API}/${videoId}`, {
         method: "POST",
         headers:{
