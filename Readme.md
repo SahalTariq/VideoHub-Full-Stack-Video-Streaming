@@ -207,10 +207,8 @@ The backend API is organized under `/api/v1`:
 ## 🚧 Future Improvements
 
 - Complete trending, subscriptions, dashboard, watch history, and tweets/posts features
-- Add automated backend and frontend tests
 - Improve upload validation and file-size handling
-- Add stronger ownership checks for update and delete operations
-- Add production deployment documentation
+
 ## Author
 
 Sahal Tariq
